@@ -10,13 +10,13 @@ class Backer
     end
 
     def backed_projects
-        backers = ProjectBacker.all.select do | pbobject |
-            pbobject.backer == self
+        backers = ProjectBacker.all.select do | pb_object |
+            pb_object.backer == self
         end
-        
-        backers.map do | back_proj |
+
+        backers.each do | my_projects |
             #if back_proj.backer == self
-                back_proj.project
+                my_projects.project
             #end
         end
     end
