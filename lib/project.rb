@@ -11,7 +11,7 @@ class Project
 
     def backers
         project_backers = ProjectBacker.all.select do | pb_object |
-            pj_object.project == self   
+            pb_object.project == self   
         end
 
         project_backers.map do | my_backers | 

@@ -14,7 +14,7 @@ class Backer
             pb_object.backer == self
         end
 
-        backers.each do | my_projects |
+        backers.map do | my_projects |
             #if back_proj.backer == self
                 my_projects.project
             #end
